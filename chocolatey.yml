@@ -1,0 +1,12 @@
+---
+- hosts: windows
+  gather_facts: no
+  tasks:
+     - name: Install Chocolatey on Windows16
+       win_chocolatey: name=procexp state=present
+      
+     - name: Create user
+       win_user:
+         name: cocoichi
+         password: GoGoCurry%
+         state: absent

@@ -1,0 +1,12 @@
+---
+- hosts: windows
+  gather_facts: no
+  tasks:
+     - name: Installing the dotnetcore
+       win_chocolatey: 
+           name: dotnetcore
+           state: present
+     - name: Installing python 
+       win_chocolatey:
+           name: python
+           state: present

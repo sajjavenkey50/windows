@@ -1,0 +1,14 @@
+---
+- hosts: windows
+  gather_facts: yes
+  tasks:
+     - name: Installing IIS
+       win_feature:
+           name: "web-server"
+           state: present
+           restart: yes
+           include_sub_features: yes
+           include_management_tools: yes
+
+
+

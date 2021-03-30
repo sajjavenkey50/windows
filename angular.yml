@@ -1,0 +1,11 @@
+---
+- hosts: windows
+  gather_facts: yes
+  tasks:
+      
+      - name: Install Angular
+        npm:
+          name: '@angular/core'
+          global: yes
+          state: present
+

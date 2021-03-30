@@ -1,0 +1,10 @@
+---
+- hosts: windows
+  gather_facts: yes
+  tasks:
+     - name: Installing mongodb
+       win_chocolatey: 
+
+               name: mongodb
+               state: present
+
